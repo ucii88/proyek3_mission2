@@ -23,7 +23,7 @@ if (isset($_GET['nim'])) {
 }
 ?>
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -36,5 +36,20 @@ if (isset($_GET['nim'])) {
         <p><strong>NIM:</strong></p>
         <p><strong>Nama:</strong></p>
         <p><strong>Umur:</strong></p>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <h2>Detail Mahasiswa</h2>
+    <?php if ($row): ?>
+        <p>NIM: <?= htmlspecialchars($row['nim']) ?></p>
+        <p>Nama: <?= htmlspecialchars($row['nama']) ?></p>
+        <p>Umur: <?= htmlspecialchars($row['umur']) ?></p>
+    <?php else: ?>
+        <p>Data tidak ditemukan.</p>
+    <?php endif; ?>
+    <a href="index.php">Kembali</a>
 </body>
 </html>
