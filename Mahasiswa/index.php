@@ -5,6 +5,12 @@ $controller = new MahasiswaController();
 $action = isset($_GET['action']) ? $_GET['action'] : 'index';
 
 switch ($action) {
+    case 'index':
+        $controller->index();
+        break;
+    case 'detail':
+        $controller->detail();
+        break;
     case 'create':
         $controller->create();
         break;
@@ -14,8 +20,8 @@ switch ($action) {
     case 'delete':
         $controller->delete();
         break;
-    case 'detail':
-        $controller->detail();
+    case 'reset':
+        $controller->reset();
         break;
     default:
         $controller->index();

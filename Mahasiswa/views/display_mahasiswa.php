@@ -31,6 +31,7 @@
                     <td><?= htmlspecialchars($row['umur']); ?></td>
                     <td>
                         <a href="index.php?action=detail&nim=<?= urlencode($row['nim']); ?>">View Detail</a> |
+                        <a href="index.php?action=edit&nim=<?= urlencode($row['nim']); ?>" class="btn btn-warning">Edit</a> |
                         <a href="index.php?action=delete&nim=<?= urlencode($row['nim']); ?>" onclick="return confirm('Yakin hapus?');">Delete</a>
                     </td>
                 </tr>
